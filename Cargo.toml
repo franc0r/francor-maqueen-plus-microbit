@@ -36,7 +36,7 @@ license = "MIT OR Apache-2.0"
 repository = "https://github.com/franc0r/francor-maqueen-plus-microbit"
 
 [workspace.dependencies]
-francor-maqueen-plus = { git = "https://github.com/franc0r/francor-maqueen-plus" }
+francor-maqueen-plus = { git = "https://github.com/franc0r/francor-maqueen-plus", tag = "v0.1.0" }
 francor-maqueen-plus-microbit = { path = "." }
 embassy-nrf = { version = "0.11.0", default-features = false, features = ["nrf52833", "rt", "time-driver-rtc1", "time", "gpiote", "defmt"] }
 embassy-executor = { version = "0.10.0", features = ["platform-cortex-m", "executor-thread", "defmt"] }
