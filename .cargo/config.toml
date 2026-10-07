@@ -1,0 +1,10 @@
+# Workspace-wide: every cargo invocation builds for the micro:bit, wherever it is run
+# from (terminal, VS Code task, rust-analyzer "Run" lens).
+[build]
+target = "thumbv7em-none-eabihf"
+
+[target.thumbv7em-none-eabihf]
+runner = "probe-rs run --chip nRF52833_xxAA"
+
+[env]
+DEFMT_LOG = "info"

@@ -1,0 +1,94 @@
+[package]
+name = "francor-maqueen-plus-microbit-examples"
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+publish = false
+
+[dependencies]
+francor-maqueen-plus-microbit = { workspace = true }
+francor-maqueen-plus = { workspace = true, features = ["defmt"] }
+embassy-nrf = { workspace = true }
+embassy-executor = { workspace = true }
+embassy-time = { workspace = true }
+embassy-futures = { workspace = true }
+defmt = { workspace = true }
+defmt-rtt = { workspace = true }
+panic-probe = { workspace = true }
+cortex-m = { workspace = true }
+cortex-m-rt = { workspace = true }
+
+# Bare-metal binaries: there is no libtest for thumbv7em-none-eabihf, so `cargo test`
+# must not build a test harness for them. Host unit tests live in francor-maqueen-plus.
+[[bin]]
+name = "display"
+path = "src/bin/display.rs"
+test = false
+bench = false
+
+[[bin]]
+name = "hardware_check"
+path = "src/bin/hardware_check.rs"
+test = false
+bench = false
+
+[[bin]]
+name = "headlights"
+path = "src/bin/headlights.rs"
+test = false
+bench = false
+
+[[bin]]
+name = "ir_remote"
+path = "src/bin/ir_remote.rs"
+test = false
+bench = false
+
+[[bin]]
+name = "lidar"
+path = "src/bin/lidar.rs"
+test = false
+bench = false
+
+[[bin]]
+name = "line_patrol"
+path = "src/bin/line_patrol.rs"
+test = false
+bench = false
+
+[[bin]]
+name = "line_sensors"
+path = "src/bin/line_sensors.rs"
+test = false
+bench = false
+
+[[bin]]
+name = "motors"
+path = "src/bin/motors.rs"
+test = false
+bench = false
+
+[[bin]]
+name = "neopixel"
+path = "src/bin/neopixel.rs"
+test = false
+bench = false
+
+[[bin]]
+name = "pid_moves"
+path = "src/bin/pid_moves.rs"
+test = false
+bench = false
+
+[[bin]]
+name = "telemetry"
+path = "src/bin/telemetry.rs"
+test = false
+bench = false
+
+[[bin]]
+name = "ultrasonic"
+path = "src/bin/ultrasonic.rs"
+test = false
+bench = false
+
